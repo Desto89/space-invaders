@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="mainScreen">
+        <div class="header">
+            <h1>SPACE INVADERS</h1>
+        </div>
+        <div class="mainMenu">
+            <div class="mainMenuBtns">
+                <h1 onclick=play()>PLAY</h1>
+                <h1 onclick=openOptions()>OPTIONS</h1>
+                <div class="controlsTab">
+                    <h1>CONTROLS:</h1><h1>LEFT/RIGHT + SPACEBAR</h1></div>
+        </div>
+            <div class="footer"><h1>by Olo</h1></div>
+        </div>
+        <div class="game">
+            <canvas style="border:1px solid white;" id="gameCanvas" width="550" height="500"></canvas>
+            <div class="scoreTab"><h1>SCORE:</h1><h1 class="score"></h1></div>
+            <div class="backBtn" onclick=backBtn()><h1>BACK</h1></div>
+        </div>
+        <div class="options">
+            <div class="option"><h1>MUSIC:</h1><button onclick=changeMusicVol(0)>-</button><h1 id="musicVol"></h1><h1>%</h1><button onclick=changeMusicVol(1)>+</button></div>
+            <div class="option"><h1>EFFECTS:</h1><button onclick=changeEffectVol(0)>-</button><h1 id="effectVol"></h1><h1>%</h1><button onclick=changeEffectVol(1)>+</button></div>
+            <div class="backBtn" onclick=backBtn()><h1>BACK</h1></div>
+        </div>
+        <div class="victory">
+            <div class="victoryScreen">
+                <h1 class="victoryTab">VICTORY!</h1>
+                <div class="scoreTab"><h1>SCORE:</h1><h1 class="score"></h1></div>
+                <div class="backBtn" onclick=backBtn()><h1>BACK</h1></div>
+            </div>
+        </div>
+        
+    </div>
+    <audio id="music" src="music.mp3"></audio>
+    <audio id="laser" src="laser.mp3"></audio>
+
+    <img id="ship" src="spaceship.png">
+    <img id="alien" src="alien.png">
+    <img id="rocket" src="rocket.png">
+    <img id="bg" src="bg.jpg">
+    <img id="exp1" src="exp.png">
+    <img id="exp2" src="exp2.png">
+    <img id="exp3" src="exp3.png">
+</body>
+<script src="index.js"></script>
+</html>
